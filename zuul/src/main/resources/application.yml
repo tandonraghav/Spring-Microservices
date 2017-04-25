@@ -1,0 +1,28 @@
+server:
+  port: 19889
+  
+spring:
+  
+  application:
+     name : zuul
+  datasource:
+    url : jdbc:mysql://localhost:3306/prafulla
+    username : root
+    password : password
+    testWhileIdle : true
+    validationQuery : SELECT 1
+    max-active: 100
+    max-idle: 50
+    min-idle: 50
+    driver-class-name: com.mysql.jdbc.Driver
+   
+zuul:
+  routes:
+    services:
+      path: /api/
+      service-id: services
+      
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:19880/eureka/
