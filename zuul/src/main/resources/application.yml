@@ -19,7 +19,7 @@ spring:
 zuul:
   routes:
     services:
-      path: /api/
+      path: /api/**
       service-id: services
       
 eureka:

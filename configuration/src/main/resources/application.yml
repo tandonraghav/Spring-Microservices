@@ -1,0 +1,27 @@
+
+server:
+  port: 8888 
+  
+spring:
+  profiles:
+    active:
+      - native
+  config:
+    name: configuration
+  cloud:
+    config:
+      
+      uri: http://localhost:8889     
+  application:
+     name : configuration
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:19880/eureka/
+
+management:
+  security:
+    enabled: false
+    
+test:
+  test:test
