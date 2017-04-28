@@ -9,7 +9,7 @@ import org.springframework.context.annotation.PropertySources;
 
 @SpringBootApplication
 @EnableConfigServer 
-@EnableDiscoveryClient
+//@EnableDiscoveryClient
 //@EnableAutoConfiguration
 /*@PropertySources({
 	@PropertySource({"file:/opt/proserv/properties/2.0/charge-services.properties",

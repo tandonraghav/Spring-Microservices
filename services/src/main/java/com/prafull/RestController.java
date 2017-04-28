@@ -16,10 +16,11 @@ import com.prafull.entity.TestRepository;
 public class RestController {
 	
 	@Autowired private TestRepository testRepo;
-	@Value("${checking:Hello default}")private String message;
+	@Value("${db:Hello default}")private String m;
+	@Value("${test:Hello default test}")private String message;
 	
 	@RequestMapping(value="/search",method=RequestMethod.POST)
 	public String search(@RequestBody Test user){
-		return message;
+		return message+" "+m;
 	}
 }

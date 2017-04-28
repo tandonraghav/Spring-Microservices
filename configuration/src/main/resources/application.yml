@@ -10,7 +10,10 @@ spring:
     name: configuration
   cloud:
     config:
-      
+      server:
+        native:
+          search-locations: file:///home/ezetap/properties
+            
       uri: http://localhost:8889     
   application:
      name : configuration
